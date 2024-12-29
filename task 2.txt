@@ -1,18 +1,18 @@
 class Student extends Person {
-    static int idCounter = 1; // Generates unique student IDs
+    static int idCounter = 1; 
     int studentID;
     int[] grades; // Array for grades
     int gradeCount; // Tracks how many grades are added
 
-    // Constructor
+
     Student(String name, String surname, int age, boolean gender) {
         super(name, surname, age, gender);
         this.studentID = idCounter++;
-        this.grades = new int[10]; // Array can hold up to 10 grades
+        this.grades = new int[10]; 
         this.gradeCount = 0;
     }
 
-    // Add a grade
+   
     void addGrade(int grade) {
         if (grade >= 0 && grade <= 100 && gradeCount < grades.length) {
             grades[gradeCount] = grade;
@@ -20,7 +20,7 @@ class Student extends Person {
         }
     }
 
-    // Calculate GPA
+
     double calculateGPA() {
         if (gradeCount == 0) return 0.0;
         int sum = 0;
@@ -30,19 +30,17 @@ class Student extends Person {
         return (double) sum / gradeCount;
     }
 
-    @Override
+    
     public String toString() {
         return super.toString() + " I am a student with ID " + studentID + ".";
     }
 }
 
-// Teacher class
 class Teacher extends Person {
     String subject;
     int yearsOfExperience;
     int salary;
 
-    // Constructor
     Teacher(String name, String surname, int age, boolean gender, String subject, int yearsOfExperience, int salary) {
         super(name, surname, age, gender);
         this.subject = subject;
@@ -50,7 +48,6 @@ class Teacher extends Person {
         this.salary = salary;
     }
 
-    // Give a raise
     void giveRaise(double percentage) {
         if (percentage > 0) {
             salary += salary * percentage / 100;
