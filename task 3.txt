@@ -1,11 +1,11 @@
 // School class
 class School {
-    Person[] members; // Array to store members
-    int memberCount;  // Tracks how many members are added
+    Person[] members; 
+    int memberCount; 
 
     // Constructor
     School() {
-        members = new Person[20]; // Array can hold up to 20 members
+        members = new Person[20]; 
         memberCount = 0;
     }
 
