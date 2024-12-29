@@ -1,15 +1,12 @@
-// School class
 class School {
     Person[] members; 
     int memberCount; 
 
-    // Constructor
     School() {
         members = new Person[20]; 
         memberCount = 0;
     }
 
-    // Add a person to the school
     void addMember(Person person) {
         if (memberCount < members.length) {
             members[memberCount] = person;
